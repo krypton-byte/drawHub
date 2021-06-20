@@ -13,3 +13,4 @@
 >>> result=generate("Krypton","Byte")
 >>> result.save("result.png")
 ```
+<img src="result.png">
