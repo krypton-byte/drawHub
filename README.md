@@ -1,8 +1,7 @@
 <h2>cara install</h2>
 
 ```bash
-> sudo apt install python3
-> python3 -m pip install PIL
+> python3 -m pip install phlogo
 ```
 <h2>Cara Pakai</h2>
 
