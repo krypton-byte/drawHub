@@ -18,7 +18,7 @@ def Gabung(fun):
         im,text1=add_corners(arg[0], 17),arg[1]
         op=Image.new("RGB",(40,20),color=(0,0,0))
         draw=ImageDraw.Draw(op)
-        size=font.getlength(text1)
+        size=round(font.getlength(text1))
         baru=Image.new("RGB",(im.width+size+210+20+130,600), color=(0,0,0))
         draw=ImageDraw.Draw(baru)
         draw.text((150,250), text1,(255,255,255),font=font)
@@ -27,8 +27,8 @@ def Gabung(fun):
     return gabung(fun)
 def generate(text1, text2):
     panjangTextBbox=font.getbbox(text2)
-    panjangTextLength=font.getlength(text2)
-    panjangTextHeight=panjangTextBbox[3]-panjangTextBbox[1]
+    panjangTextLength=round(font.getlength(text2))
+    panjangTextHeight=(round(panjangTextBbox[3])+10)-round(panjangTextBbox[1])
     oren=Image.new("RGBA",(panjangTextLength+20,140),color=(240, 152, 0))
     draw=ImageDraw.Draw(oren)
     draw.text((10,int((oren.height-panjangTextHeight)/2)-10),text2, (0,0,0),font=font)
