@@ -28,7 +28,7 @@ def Gabung(fun):
 def generate(text1, text2):
     panjangTextBbox=font.getbbox(text2)
     panjangTextLength=font.getlength(text2)
-    panjangTextHeight=pajangTextBbox[3]-pajangTextBbox[1]
+    panjangTextHeight=panjangTextBbox[3]-panjangTextBbox[1]
     oren=Image.new("RGBA",(panjangTextLength+20,140),color=(240, 152, 0))
     draw=ImageDraw.Draw(oren)
     draw.text((10,int((oren.height-panjangTextHeight)/2)-10),text2, (0,0,0),font=font)
